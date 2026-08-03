@@ -1,0 +1,10 @@
+{
+	"id": "date-nullable-time",
+	"name": "Date Nullable Time",
+	"version": "1.0.0",
+	"minAppVersion": "1.13.4",
+	"description": "Removes time from datetime properties when the time is 00:00:00.",
+	"author": "Jakob Lien",
+	"authorUrl": "https://github.com/JakobLien",
+	"isDesktopOnly": false
+}
