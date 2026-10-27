@@ -29,6 +29,18 @@ export default class DateNullableTime extends Plugin {
 				}
 			})
 		);
+
+		this.registerEvent(
+			this.app.vault.on('rename', async (file, oldPath) => {
+				// Add spaces before / after the ISO date if missing
+				let newFilePath = file.path
+					.replace(/([^/]*[^/ ])(\d{4}-\d{2}-\d{2}(?=[^/]*$))/, "$1 $2")
+					.replace(/(\d{4}-\d{2}-\d{2})([^/ ][^/]*\.md$)/, "$1 $2");
+				if (file.path !== newFilePath) {
+					await this.app.fileManager.renameFile(file, newFilePath);
+				}
+            })
+		)
 	}
 
 	onunload() {}

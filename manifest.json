@@ -1,9 +1,9 @@
 {
 	"id": "date-nullable-time",
 	"name": "Date Nullable Time",
-	"version": "1.1.0",
+	"version": "1.2.0",
 	"minAppVersion": "1.13.4",
-	"description": "Removes time from datetime properties when the time is 00:00:00.",
+	"description": "Removes time from datetime properties without time, and updates iso-date in title to match that.",
 	"author": "Jakob Lien",
 	"authorUrl": "https://github.com/JakobLien",
 	"isDesktopOnly": false
